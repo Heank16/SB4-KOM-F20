@@ -84,7 +84,7 @@ public class MovingPart
             dy += sin(radians) * acceleration * dt;
         }
 
-        // deccelerating
+        // decelerating
         float vec = (float) sqrt(dx * dx + dy * dy);
         if (vec > 0) {
             dx -= (dx / vec) * deceleration * dt;

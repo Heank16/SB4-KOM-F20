@@ -8,6 +8,7 @@
     </parent>
     <artifactId>Enemy</artifactId>
     <packaging>jar</packaging>
+
     <dependencies>
         <dependency>
             <groupId>${project.groupId}</groupId>

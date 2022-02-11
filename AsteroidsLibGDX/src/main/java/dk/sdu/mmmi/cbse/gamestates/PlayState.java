@@ -89,8 +89,8 @@ public class PlayState extends GameState {
 		player.draw(sr);
 
 		// draw bullets
-		for (int i = 0; i < bullets.size(); i++) {
-			bullets.get(i).draw(sr);
+		for (Bullet bullet : bullets) {
+			bullet.draw(sr);
 		}
 
 		// draw flying saucer
@@ -99,8 +99,8 @@ public class PlayState extends GameState {
 		}
 
 		// draw fs bullets
-		for (int i = 0; i < enemyBullets.size(); i++) {
-			enemyBullets.get(i).draw(sr);
+		for (Bullet enemyBullet : enemyBullets) {
+			enemyBullet.draw(sr);
 		}
 	}
 	

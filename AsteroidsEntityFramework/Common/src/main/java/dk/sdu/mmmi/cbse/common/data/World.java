@@ -14,6 +14,7 @@ public class World {
 
     private final Map<String, Entity> entityMap = new ConcurrentHashMap<>();
 
+    @SuppressWarnings("UnusedReturnValue")
     public String addEntity(Entity entity) {
         entityMap.put(entity.getID(), entity);
         return entity.getID();
@@ -31,7 +32,8 @@ public class World {
         return entityMap.values();
     }
 
-    public <E extends Entity> List<Entity> getEntities(Class<E>... entityTypes) {
+    @SafeVarargs
+    public final <E extends Entity> List<Entity> getEntities(Class<E>... entityTypes) {
         List<Entity> r = new ArrayList<>();
         for (Entity e : getEntities()) {
             for (Class<E> entityType : entityTypes) {

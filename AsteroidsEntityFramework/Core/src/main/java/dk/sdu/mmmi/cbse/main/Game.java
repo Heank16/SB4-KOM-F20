@@ -23,9 +23,9 @@ public class Game
     private ShapeRenderer sr;
 
     private final GameData gameData = new GameData();
-    private List<IEntityProcessingService> entityProcessors = new ArrayList<>();
-    private List<IGamePluginService> entityPlugins = new ArrayList<>();
-    private World world = new World();
+    private final List<IEntityProcessingService> entityProcessors = new ArrayList<>();
+    private final List<IGamePluginService> entityPlugins = new ArrayList<>();
+    private final World world = new World();
 
     @Override
     public void create() {
@@ -34,7 +34,7 @@ public class Game
         gameData.setDisplayHeight(Gdx.graphics.getHeight());
 
         cam = new OrthographicCamera(gameData.getDisplayWidth(), gameData.getDisplayHeight());
-        cam.translate(gameData.getDisplayWidth() / 2, gameData.getDisplayHeight() / 2);
+        cam.translate(gameData.getDisplayWidth() / 2f, gameData.getDisplayHeight() / 2f);
         cam.update();
 
         sr = new ShapeRenderer();
@@ -84,14 +84,14 @@ public class Game
 
             sr.begin(ShapeRenderer.ShapeType.Line);
 
-            float[] shapex = entity.getShapeX();
-            float[] shapey = entity.getShapeY();
+            float[] shapeX = entity.getShapeX();
+            float[] shapeY = entity.getShapeY();
 
-            for (int i = 0, j = shapex.length - 1;
-                    i < shapex.length;
+            for (int i = 0, j = shapeX.length - 1;
+                    i < shapeX.length;
                     j = i++) {
 
-                sr.line(shapex[i], shapey[i], shapex[j], shapey[j]);
+                sr.line(shapeX[i], shapeY[i], shapeX[j], shapeY[j]);
             }
 
             sr.end();

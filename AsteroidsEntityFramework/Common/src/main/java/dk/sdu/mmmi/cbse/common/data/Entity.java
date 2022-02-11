@@ -12,7 +12,7 @@ public class Entity implements Serializable {
     private float[] shapeX = new float[4];
     private float[] shapeY = new float[4];
     private float radius;
-    private Map<Class, EntityPart> parts;
+    private final Map<Class, EntityPart> parts;
     
     public Entity() {
         parts = new ConcurrentHashMap<>();
