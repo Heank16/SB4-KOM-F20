@@ -1,9 +1,6 @@
-/*/target/
-/*/*/target/
-/*/.idea
+**/target/
+**/.idea/
 *.iml
 .DS_Store
 *.jar
-/*/runner/
-/JavaModularAsteroids/nbproject/private/
-.idea/
+**/runner/
