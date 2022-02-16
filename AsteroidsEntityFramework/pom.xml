@@ -10,6 +10,7 @@
         <module>Common</module>
         <module>Player</module>
         <module>Enemy</module>
+        <module>Collision</module>
         <module>Asteroid</module>
     </modules>
     <properties>
